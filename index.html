@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nevena Kantarevic – Nevenas Welt</title>
+  <meta name="description" content="Spirituelle Begleitung mit Herz – Nevena Kantarevic in Viersen. Kartenlegen, Familienaufstellung, Quantenheilung & Spirituelle Beratung.">
+  <meta name="theme-color" content="#C9A86A">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Lato:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A86A;
+      --gold-light: #D4B87E;
+      --brown-dark: #5D4037;
+      --brown-warm: #8B6F47;
+      --brown-muted: #6D5D52;
+      --beige: #F5F1E8;
+      --rose: #E8C4B8;
+      --sage: #C8B6FF;
+      --sage-dark: #B8A4E8;
+      --whatsapp: #25d366;
+      --whatsapp-dark: #128c7e;
+      --text: #3D3028;
+      --text-light: #6D5D52;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--beige);
+      color: var(--text);
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+
+    .card {
+      max-width: 480px;
+      margin: 0 auto;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-warm) 100%);
+      padding: 2.5rem 1.5rem 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      background: rgba(201, 168, 106, 0.12);
+      border-radius: 50%;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 150px;
+      height: 150px;
+      background: rgba(200, 182, 255, 0.08);
+      border-radius: 50%;
+    }
+
+    .logo {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 1rem;
+    }
+
+    .logo img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      background: white;
+    }
+
+    .brand {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .name {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 0.35rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0.85rem;
+      position: relative;
+      z-index: 1;
+      font-style: italic;
+    }
+
+    .tagline {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tagline span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--brown-dark);
+      background: var(--gold);
+      padding: 0.3rem 0.7rem;
+      border-radius: 100px;
+    }
+
+    /* About */
+    .about {
+      padding: 1.5rem;
+      background: white;
+      margin: 1rem 1rem 0;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+
+    .about p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: var(--text-light);
+    }
+
+    /* Services */
+    .section-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .services {
+      padding: 1.75rem 1rem 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      padding: 0 0.5rem;
+    }
+
+    .service {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 0.85rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .service:active {
+      transform: scale(0.97);
+    }
+
+    .service-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .service span {
+      font-size: 0.78rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .dot-1 { background: var(--sage); }
+    .dot-2 { background: var(--gold); }
+    .dot-3 { background: var(--rose); }
+    .dot-4 { background: var(--brown-warm); }
+
+    /* Contact actions */
+    .actions {
+      padding: 1.25rem 1.5rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.9rem 1.1rem;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: inherit;
+    }
+
+    .action-btn:active {
+      transform: scale(0.98);
+    }
+
+    .action-btn svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    .action-btn .label-sub {
+      font-size: 0.75rem;
+      font-weight: 400;
+      opacity: 0.7;
+      display: block;
+    }
+
+    .btn-save {
+      background: var(--brown-dark);
+      color: var(--gold);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white;
+    }
+
+    .btn-phone {
+      background: var(--brown-warm);
+      color: white;
+    }
+
+    .btn-instagram {
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+      color: white;
+    }
+
+    .btn-website {
+      background: var(--sage);
+      color: var(--brown-dark);
+    }
+
+    .btn-maps {
+      background: var(--gold);
+      color: var(--brown-dark);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.7rem;
+      color: var(--text-light);
+      opacity: 0.5;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .actions { animation: fadeInUp 0.4s ease 0.1s both; }
+    .about { animation: fadeInUp 0.4s ease 0.2s both; }
+    .services { animation: fadeInUp 0.4s ease 0.3s both; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <img src="logo.png" alt="Nevenas Welt – Logo" width="120" height="120">
+      </div>
+      <div class="brand">Nevenas Welt</div>
+      <div class="name">Nevena Kantarevic</div>
+      <div class="title">Spirituelle Begleiterin, Coach & Trainerin</div>
+      <div class="tagline">
+        <span>Kartenlegen</span>
+        <span>Aufstellung</span>
+        <span>Heilung</span>
+        <span>Beratung</span>
+      </div>
+    </header>
+
+    <!-- Contact Actions -->
+    <section class="actions">
+      <!-- Save Contact -->
+      <button onclick="saveContact()" class="action-btn btn-save">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/>
+          <polyline points="17,21 17,13 7,13 7,21"/>
+          <polyline points="7,3 7,8 15,8"/>
+        </svg>
+        <div>
+          Kontakt speichern
+          <span class="label-sub">Als Kontakt im Telefon ablegen</span>
+        </div>
+      </button>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/4917622115038?text=Hallo%20Nevena%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Termin%20bei%20dir." target="_blank" rel="noopener" class="action-btn btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <div>
+          WhatsApp schreiben
+          <span class="label-sub">0176 22115038</span>
+        </div>
+      </a>
+
+      <!-- Phone -->
+      <a href="tel:+4917622115038" class="action-btn btn-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        <div>
+          Anrufen
+          <span class="label-sub">0176 22115038</span>
+        </div>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/nevenawelt" target="_blank" rel="noopener" class="action-btn btn-instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+        <div>
+          Instagram
+          <span class="label-sub">@nevenaswelt</span>
+        </div>
+      </a>
+
+      <!-- Website -->
+      <a href="https://nevenaswelt.de" target="_blank" rel="noopener" class="action-btn btn-website">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+        </svg>
+        <div>
+          Website besuchen
+          <span class="label-sub">nevenaswelt.de</span>
+        </div>
+      </a>
+
+      <!-- Maps -->
+      <a href="https://maps.google.com/?q=Hauptstra%C3%9Fe+146+41747+Viersen" target="_blank" rel="noopener" class="action-btn btn-maps">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <div>
+          Standort
+          <span class="label-sub">Hauptstraße 146, 41747 Viersen</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+      <p>Spirituelle Begleitung in Viersen & NRW. Ich bin Nevena, spirituelle Begleiterin mit über 20 Jahren Erfahrung. Mit Liebe für deine Seele begleite ich dich auf deinem persönlichen Weg zu mehr Klarheit, innerem Frieden und Selbsterkenntnis.</p>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <h2 class="section-title">Meine Angebote</h2>
+      <div class="services-grid">
+        <a href="https://nevenaswelt.de/mediales-kartenlegen" target="_blank" rel="noopener" class="service">
+          <div class="service-dot dot-1"></div>
+          <span>Mediales Kartenlegen</span>
+        </a>
+        <a href="https://nevenaswelt.de/familienaufstellung" target="_blank" rel="noopener" class="service">
+          <div class="service-dot dot-2"></div>
+          <span>Familien&shy;aufstellung</span>
+        </a>
+        <a href="https://nevenaswelt.de/quantenheilung" target="_blank" rel="noopener" class="service">
+          <div class="service-dot dot-3"></div>
+          <span>Quanten&shy;heilung</span>
+        </a>
+        <a href="https://nevenaswelt.de/spirituelle-beratung" target="_blank" rel="noopener" class="service">
+          <div class="service-dot dot-4"></div>
+          <span>Spirituelle Beratung</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Nevenas Welt · Nevena Kantarevic · Viersen
+    </footer>
+  </div>
+
+  <script>
+    function saveContact() {
+      const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:Nevena Kantarevic',
+        'N:Kantarevic;Nevena;;;',
+        'ORG:Nevenas Welt',
+        'TITLE:Spirituelle Begleiterin\\, Coach & Trainerin',
+        'TEL;TYPE=CELL:+4917622115038',
+        'ADR;TYPE=WORK:;;Hauptstraße 146;Viersen;;41747;Deutschland',
+        'URL:https://nevenaswelt.de',
+        'X-SOCIALPROFILE;TYPE=instagram:https://instagram.com/nevenawelt',
+        'NOTE:Mediales Kartenlegen\\, Familienaufstellung\\, Quantenheilung\\, Spirituelle Beratung – Über 20 Jahre Erfahrung',
+        'END:VCARD'
+      ].join('\r\n');
+
+      var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+      if (isIOS) {
+        window.location.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
+      } else {
+        var blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'Nevena_Kantarevic.vcf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+    }
+  </script>
+</body>
+</html>
